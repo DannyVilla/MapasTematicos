@@ -1,0 +1,40 @@
+﻿DISTRITO_L,nom_dis,lat_decimal,lon_decimal,Municipios
+27,Acayucan,17.95050163,-94.91464623,"Acayucan, Olutla, Playa Vicente, San Juan Evangelista, Sayula de Alemán, Soconusco, Texistepec, Santiago Sochiapa"
+4,Álamo,20.90669515,-97.67885468,"Álamo Temapache, Benito Juárez, Castillo de Teayo, Cerro Azul, Huayacocotla, Ilamatlán, Ixhutlán de Madero, Texcatepec, Tlachichilco, Zacualpan y Zontecomatlán"
+16,Boca del Río,19.10745677,-96.10598663,"Acula, Alvarado, Boca del Río, Ignacio de la Llave y Tlalixcoyan"
+21,Camerino Z. Mendoza,18.81026184,-97.17633009,"Acultzingo, Aquila, Camerino Z. Mendoza, Huiloapan de Cuauhtémoc, Ixhuatlancillo, Maltrata, Mariano Escobedo, Nogales, La Perla y Río Blanco"
+12,Coatepec,19.4536,-96.9588,"Acajete, Ayahualulco, Banderilla, Coatepec, Cosautlán de Carvajal, Ixhuacán de los Reyes, Rafael Lucio, Teocelo, Tlalnelhuayocan y Xico"
+29,Coatzacoalcos I,18.14905, -94.4353,Coatzacoalcos I
+30,Coatzacoalcos II,18.0906044,-94.32702713,Coatzacoalcos II
+19,Córdoba,18.8942,-96.9347,"Amatlán de los Reyes, Córdoba y Yanga"
+23,Cosamaloapan,18.36759,-95.79857,"Cosamaloapan, Cuichapa, Chacaltianguis, Ixmatlahuacan, Omealca, Otatitlán, Tierra Blanca, Tlacojalpan, Tuxtilla y Tres Valles"
+26,Cosoleacaque,17.9960845,-94.63740253,"Cosoleacaque, Chinameca, Jáltipan, Mecayapan, Oteapan, Pajapan, Soteapan, Zaragoza y Tatahuicapan de Juárez"
+13,Emiliano Zapata,19.26321613,-96.24596334,"Actopan, La Antigua, Apazapan, Tlaltetela, Emiliano Zapata, Jalcomulco, Paso de Ovejas, Puente Nacional y Úrsulo Galván"
+18,Huatusco,19.12727,-96.81749,"Alpatlahuac, Calcahualco, Comapa, Coscomatepec, Chocamán, Huatusco, Ixhuatlán del Café, Sochiapa, Tenampa, Tepetlaxco, Tlacotepec de Mejía, Tomatlán, Totutla y Zentla"
+7,Martínez de la Torre,20.07255611,-97.05663616,"Gutiérrez Zamora, Martínez de la Torre, Tecolutla, Tlapacoyan y San Rafael"
+17,Medellín de Bravo,19.059, -96.1584,"Camarón de Tejeda, Atoyac, Carrillo Puerto, Cotaxtla, Cuitláhuac, Jamapa, Manlio Fabio Altamirano, Medellín, Paso del Macho y Soledad de Doblado"
+28,Minatitlán,17.9889,-94.5586,"Hidalgotitlán, Jesús Carranza, Minatitlán y Uxpanapa"
+8,Misantla,19.92992,-96.85194,"Acatlán, Alto Lucero, Cocoatzintla, Colipa, Chiconquiaco, Jilotepec, Juchique de Ferrer, Landero y Coss, Miahuatlán, Misantla, Naolinco, Nautla, Tenochtitlán, Tepetlán, Tlacolulan,Tonayán , Vega de Alatorre y Yecuatla"
+20,Orizaba,18.85047787,-97.08835545,"Atzacan, Fortín, Ixtaczoquitlán y Orizaba"
+1,Pánuco,22.05133713,-98.18108641,"Chinampa de Gorostiza, Ozuluama, Pánuco, Pueblo Viejo, Tamalín, Tampico Alto, Tantima, Tempoal y El Higo"
+6,Papantla de Olarte,20.45663232,-97.31489881,"Coahuitlán, Coxquihui, Coyutla, Chumatlán, Espinal, Filomeno Mata, Mecatlán, Papantla y Zozocolco de Hidalgo"
+9,Perote,19.56383683,-97.24377262,"Altotonga, Atzalan, Jalacingo, Las Minas, Perote, Las Vigas de Ramírez, Tatatila y Villa Aldama"
+5,Poza Rica de Hidalgo,20.53315,-97.45946,Coatzintla y Poza Rica de Hidalgo
+25,San Andrés Tuxtla,18.4497, -95.2122,"Catemaco, Huayapan de Ocampo y San Andrés Tuxtla"
+24,Santiago Tuxtla,18.4667, -95.318,"Amatitlán, Ángel R. Cabada, Isla, Juan Rodríguez Clara, Lerdo de Tejada, Saltabarranca, Santiago Tuxtla, José Azueta, Tlacotalpan y Carlos A. Carrillo"
+2,Tantoyuca,21.34872504,-98.22562984,"Naranjos Amatlán, Citlaltépetl, Chalma, Chiconamel, Chicontepec, Chontla, Ixcatepec, Platón Sánchez, Tancoco, Tantoyuca y Tepetzintla"
+3,Tuxpan de Rodríguez Cano,20.95772069,-97.40711807,"Cazones de Herrera, Tamiahua, Tihuatlán y Tuxpan"
+14,Veracruz I,19.20238181,-96.13926857,Veracruz
+15,Veracruz II,19.18095,-96.1429,Veracruz
+0,Xalapa,19.53263615,-96.89711358,Xalapa
+10,Xalapa I,19.54786994,-96.91989823,Xalapa
+11,Xalapa II,19.53334039,-96.89123107,Xalapa
+31,Xalapa III,19.57667238,-96.86558318,Xalapa
+32,Xalapa IV,19.56316915,-96.84322667,Xalapa
+37,Xalapa IX,19.50347131,-96.92290755,Xalapa
+33,Xalapa V,19.5647896,-96.88564671,Xalapa
+34,Xalapa VI,19.54750398,-96.85440492,Xalapa
+35,Xalapa VII,19.52751517,-96.85211195,Xalapa
+36,Xalapa VIII,19.51346751,-96.87303534,Xalapa
+38,Xalapa X,19.49617639,-96.90112429,Xalapa
+22,Zongolica,18.66552,-96.99801,"Astacinga, Atlahuilco, Coetzala, Magdalena, Mixtla de Altamirano, Naranjal, Rafael Delgado, Los Reyes, San Andrés Tenejapan, Soledad Atzompa, Tehuipango, Tequila, Texhuacán, Tezonapa, Tlaquilpa, Tlilapan, Xoxocotla y Zongolica"

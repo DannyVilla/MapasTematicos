@@ -1,0 +1,12 @@
+name: Test_1
+title: Test_1
+username:
+account: coespoveracruz
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 963598
+bundleId: 2128088
+url: https://coespoveracruz.shinyapps.io/Test_1/
+when: 1559599887.30435
+asMultiple: FALSE
+asStatic: FALSE
