@@ -1,4 +1,4 @@
-    import folium
+import folium
 import pandas as pd
 import geopandas as gpd
 from folium.plugins import Search
@@ -131,13 +131,13 @@ statesearch = Search(
 #Definimos los layers
 layer_oficinas = FeatureGroup(name='Directorio de Oficinas (Actualización 2024)',show=False)
 layer_reuniones_2021_2023 = FeatureGroup(name='Reuniones realizadas 2021 - 2023', show=False)
-layer_reuniones_2024 = FeatureGroup(name='Reuniones realizadas 2024 (1er y 2do Trimestre)',show=False)
+layer_reuniones_2024 = FeatureGroup(name='Reuniones realizadas 2024 (1er, 2do y 3er Trimestre)',show=False)
 layer_tramites_scp_2021_2023 = FeatureGroup(name='Trámites Subdirección de Concertación Política 2021 - 2023', show=False)
-layer_tramites_scp_2024 = FeatureGroup(name='Trámites Subdirección de Concertación Política 2024 (1er y 2do Trimestre)',show=False)
+layer_tramites_scp_2024 = FeatureGroup(name='Trámites Subdirección de Concertación Política 2024 (1er, 2do y 3er Trimestre)',show=False)
 layer_tramites_sac_2021_2023 = FeatureGroup(name='Trámites Subdireción de Atención Ciudadana 2021 - 2023', show=False)
-layer_tramites_sac_2024 = FeatureGroup(name='Trámites Subdireción de Atención Ciudadana 2024 (1er y 2do Trimestre)',show=False)
+layer_tramites_sac_2024 = FeatureGroup(name='Trámites Subdireción de Atención Ciudadana 2024 (1er, 2do y 3er Trimestre)',show=False)
 layer_tramites_slyp_2021_2023 = FeatureGroup(name='Trámites Subdirección de Legalización y Permisos 2021 - 2023', show=False)
-layer_tramites_slyp_2024 = FeatureGroup(name='Trámites Subdirección de Legalización y Permisos 2024 (1er y 2do Trimestre)',show=False)
+layer_tramites_slyp_2024 = FeatureGroup(name='Trámites Subdirección de Legalización y Permisos 2024 (1er, 2do y 3er Trimestre)',show=False)
 
 #Definimos marcadores de las actividades
 from folium.plugins import MarkerCluster
