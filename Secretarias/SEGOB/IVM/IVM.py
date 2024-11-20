@@ -19,6 +19,7 @@ pd.set_option('max_columns', None)
 from branca.element import MacroElement
 from jinja2 import Template
 
+
 class BindColormap(MacroElement):
     """Binds a colormap to a given layer.
 
@@ -139,7 +140,7 @@ layer_1 = FeatureGroup(name='Directorio de Oficinas', show=False)
 layer_actividades_2021 = FeatureGroup(name='Acciones 2021', show=False)
 layer_actividades_2022 = FeatureGroup(name='Acciones 2022', show=False)
 layer_actividades_2023 = FeatureGroup(name='Acciones 2023', show=False)
-layer_actividades_2024 = FeatureGroup(name='Acciones 2024 (1er y 2do Trimestre)', show=False)
+layer_actividades_2024 = FeatureGroup(name='Acciones 2024 (1er, 2do y 3er Trimestre)', show=False)
 layer_3 = FeatureGroup(name='Directorio servidores públicos', show=False)
 
 # ---- Marcadores de las actividades

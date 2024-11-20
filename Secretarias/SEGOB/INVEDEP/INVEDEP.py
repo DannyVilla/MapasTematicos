@@ -10,6 +10,7 @@ from Funciones import *
 path_ini = Path("C:/ESyP/Mapas_COESPO/Resources/")
 pd.options.display.float_format = '{:,.2f}'.format
 pd.set_option('display.max_columns', None)
+pd.options.display.max_rows = 5
 
 from branca.element import MacroElement
 from jinja2 import Template
@@ -167,7 +168,7 @@ Layer03 = FeatureGroup(name='Brigadas Itinerantes 2020', show=False)
 Layer04 = FeatureGroup(name='Brigadas Itinerantes 2021', show=False)
 Layer05 = FeatureGroup(name='Brigadas Itinerantes 2022', show=False)
 Layer06 = FeatureGroup(name='Brigadas Itinerantes 2023', show=False)
-Layer07 = FeatureGroup(name='Brigadas Itinerantes 2024 (1er y 2do Trimestre)', show=False)
+Layer07 = FeatureGroup(name='Brigadas Itinerantes 2024 (1er, 2do y 3er Trimestre)', show=False)
 
 # ---- Marcadores de las actividades
 from folium.plugins import MarkerCluster
