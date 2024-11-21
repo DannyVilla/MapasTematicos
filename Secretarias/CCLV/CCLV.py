@@ -80,7 +80,12 @@ LogoCOESPO = ('images/COESPO_Logo_3.png')
 
 df_Localidades = pd.read_csv(Path.joinpath(path_ini, "cabeceras (localidades).csv"))
 df_actividades = pd.read_excel("CCLV_OK.xlsx", sheet_name='2022')
+df_actividades2023 = pd.read_excel("CCLV_OK.xlsx", sheet_name='2023')
+df_actividades2024 = pd.read_excel("CCLV_OK.xlsx", sheet_name='2024')
+
 df_actividades = pd.merge(df_actividades, df_Localidades, on="CVEGEO")
+df_actividades2023 = pd.merge(df_actividades2023, df_Localidades, on="CVEGEO")
+df_actividades2024 = pd.merge(df_actividades2024, df_Localidades, on="CVEGEO")
 
 df_colores = pd.read_excel("CCLV_OK.xlsx", sheet_name='DELEGACIONES_REGIONALES')
 df_colores = pd.merge(df, df_colores, on="CVEGEO")
@@ -141,10 +146,14 @@ from folium.plugins import FloatImage
 FloatImage(LogoCOESPO, bottom=3, left=0).add_to(m)
 
 # ---- Capas
-layer_1 = FeatureGroup(name='Jurisdicción y Delegado Regional', show=False)
+layer_1 = FeatureGroup(name='Jurisdicción y Delegado Regional 2022', show=False)
+layer_2 = FeatureGroup(name='Jurisdicción y Delegado Regional 2023', show=False)
+layer_3 = FeatureGroup(name='Jurisdicción y Delegado Regional 2024', show=False)
 
 # ---- Marcadores de las actividades
 mc_actividades = MarkerCluster()
+mc_actividades2023 = MarkerCluster()
+mc_actividades2024 = MarkerCluster()
 
 pd.set_option('display.max_columns', None)
 
@@ -162,10 +171,16 @@ def genera_actividades(df_in, mc):
             mc)
 
 genera_actividades(df_actividades, mc_actividades)
+genera_actividades(df_actividades2023, mc_actividades2023)
+genera_actividades(df_actividades2024, mc_actividades2024)
 
 mc_actividades.add_to(layer_1)
+mc_actividades2023.add_to(layer_2)
+mc_actividades2024.add_to(layer_3)
 
 layer_1.add_to(m)
+layer_2.add_to(m)
+layer_3.add_to(m)
 
 # ---- Botón de Búsqueda de Municipio
 statesearch = Search(
