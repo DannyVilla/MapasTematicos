@@ -146,7 +146,7 @@ layer_obras2020 = FeatureGroup(name='Obras del 2020', show=False)
 layer_obras2021 = FeatureGroup(name='Obras del 2021', show=False)
 layer_obras2022 = FeatureGroup(name='Obras del 2022', show=False)
 layer_obras2023 = FeatureGroup(name='Obras del 2023', show=False)
-layer_obras2024 = FeatureGroup(name='Obras del 2024 (1er y 2do Trimestre)', show=False)
+layer_obras2024 = FeatureGroup(name='Obras del 2024 (1er, 2do y 3er Trimestre)', show=False)
 
 
 # ---- Marcadores de las actividades

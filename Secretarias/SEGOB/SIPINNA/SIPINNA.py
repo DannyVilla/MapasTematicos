@@ -149,7 +149,7 @@ layer_procuradores = FeatureGroup(name='Directorio Procuradores 2024', show=Fals
 layer_2 = FeatureGroup(name='Capacitaciones 2021', show=False)
 layer_3 = FeatureGroup(name='Capacitaciones 2022', show=False)
 layer_4 = FeatureGroup(name='Capacitaciones 2023', show=False)
-layer_5 = FeatureGroup(name='Capacitaciones 2024 (1er y 2do Trimestre)', show=False)
+layer_5 = FeatureGroup(name='Capacitaciones 2024 (1er, 2do y 3er Trimestre)', show=False)
 
 # ---- Marcadores de las actividades
 from folium.plugins import MarkerCluster
