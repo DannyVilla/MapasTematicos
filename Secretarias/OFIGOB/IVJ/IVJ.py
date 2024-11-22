@@ -54,11 +54,12 @@ df_Localidades = pd.read_csv(Path.joinpath(path_ini, "cabeceras (localidades).cs
 df_acciones_2021 = pd.read_excel("IVJ_OK.xlsx", sheet_name='ACCIONES 2021')
 df_acciones_2022 = pd.read_excel("IVJ_OK.xlsx", sheet_name='ACCIONES 2022')
 df_acciones_2023 = pd.read_excel("IVJ_OK.xlsx", sheet_name='ACCIONES 2023')
+df_acciones_2024 = pd.read_excel("IVJ_OK.xlsx", sheet_name='ACCIONES 2024')
 
 df_acciones_2021 = pd.merge(df_acciones_2021, df_Localidades, on="CVEGEO")
 df_acciones_2022 = pd.merge(df_acciones_2022, df_Localidades, on="CVEGEO")
 df_acciones_2023 = pd.merge(df_acciones_2023, df_Localidades, on="CVEGEO")
-
+df_acciones_2024 = pd.merge(df_acciones_2024, df_Localidades, on="CVEGEO")
 
 df.loc[df['region'] == 'Las_Montanas', 'region'] = 'Las Montañas'
 df.loc[df['region'] == 'Huasteca_Alta', 'region'] = 'Huasteca Alta'
@@ -130,7 +131,7 @@ FloatImage(LogoCOESPO, bottom=3, left=0).add_to(m)
 layer_2021 = FeatureGroup(name='Acciones 2021', show=False)
 layer_2022 = FeatureGroup(name='Acciones 2022', show=False)
 layer_2023 = FeatureGroup(name='Acciones 2023', show=False)
-
+layer_2024 = FeatureGroup(name='Acciones 2024 (1er, 2do y 3er Trimestre)', show=False)
 
 # ---- Marcadores de las actividades
 from folium.plugins import MarkerCluster
@@ -138,6 +139,8 @@ from folium.plugins import MarkerCluster
 mc_2021 = MarkerCluster()
 mc_2022 = MarkerCluster()
 mc_2023 = MarkerCluster()
+mc_2024 = MarkerCluster()
+
 
 def acciones(df_in,mc):
     for row in df_in.itertuples():
@@ -154,14 +157,17 @@ def acciones(df_in,mc):
 acciones(df_acciones_2021,mc_2021)
 acciones(df_acciones_2022,mc_2022)
 acciones(df_acciones_2023,mc_2023)
+acciones(df_acciones_2024,mc_2024)
 
 mc_2021.add_to(layer_2021)
 mc_2022.add_to(layer_2022)
 mc_2023.add_to(layer_2023)
+mc_2024.add_to(layer_2024)
 
 layer_2021.add_to(m)
 layer_2022.add_to(m)
 layer_2023.add_to(m)
+layer_2024.add_to(m)
 
 # ---- Botón de Búsqueda de Municipio
 statesearch = Search(
