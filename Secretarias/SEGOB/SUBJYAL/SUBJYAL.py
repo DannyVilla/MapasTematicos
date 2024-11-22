@@ -55,17 +55,18 @@ df_Localidades = pd.read_csv(Path.joinpath(path_ini, "cabeceras (localidades).cs
 
 df2021 = pd.read_excel("SUBYAL-OK.xlsx", sheet_name='2021')
 df2022 = pd.read_excel("SUBYAL-OK.xlsx", sheet_name='2022')
-df2023_1 = pd.read_excel("SUBYAL-OK.xlsx", sheet_name='2023_1')
-df2023_2 = pd.read_excel("SUBYAL-OK.xlsx", sheet_name='2023_2')
-df2023_3 = pd.read_excel("SUBYAL-OK.xlsx", sheet_name='2023_3')
-df2023_4 = pd.read_excel("SUBYAL-OK.xlsx", sheet_name='2023_4')
+df2023 = pd.read_excel("SUBYAL-OK.xlsx", sheet_name='2023')
+df2024_1 = pd.read_excel("SUBYAL-OK.xlsx", sheet_name='2024_1')
+df2024_2 = pd.read_excel("SUBYAL-OK.xlsx", sheet_name='2024_2')
+df2024_3 = pd.read_excel("SUBYAL-OK.xlsx", sheet_name='2024_3')
 
 df2021 = pd.merge(df2021, df_Localidades, on="CVEGEO")
 df2022 = pd.merge(df2022, df_Localidades, on="CVEGEO")
-df2023_1 = pd.merge(df2023_1, df_Localidades, on="CVEGEO")
-df2023_2 = pd.merge(df2023_2, df_Localidades, on="CVEGEO")
-df2023_3 = pd.merge(df2023_3, df_Localidades, on="CVEGEO")
-df2023_4 = pd.merge(df2023_4, df_Localidades, on="CVEGEO")
+df2023 = pd.merge(df2023, df_Localidades, on="CVEGEO")
+
+df2024_1 = pd.merge(df2024_1, df_Localidades, on="CVEGEO")
+df2024_2 = pd.merge(df2024_2, df_Localidades, on="CVEGEO")
+df2024_3 = pd.merge(df2024_3, df_Localidades, on="CVEGEO")
 
 df.loc[df['region'] == 'Las_Montanas', 'region'] = 'Las Montañas'
 df.loc[df['region'] == 'Huasteca_Alta', 'region'] = 'Huasteca Alta'
@@ -129,10 +130,12 @@ FloatImage(LogoCOESPO, bottom=3, left=0).add_to(m)
 #CAPAS
 layer_1 = FeatureGroup(name='Acciones 2021', show=False)
 layer_2 = FeatureGroup(name='Acciones 2022', show=False)
-layer_3 = FeatureGroup(name='Acciones 2023 (1er Trimestre)', show=False)
-layer_4 = FeatureGroup(name='Acciones 2023 (2do Trimestre)', show=False)
-layer_5 = FeatureGroup(name='Acciones 2023 (3er Trimestre)', show=False)
-layer_6 = FeatureGroup(name='Acciones 2023 (4to Trimestre)', show=False)
+layer_3 = FeatureGroup(name='Acciones 2023', show=False)
+
+layer_4 = FeatureGroup(name='Acciones 2024 (1er Trimestre)', show=False)
+layer_5 = FeatureGroup(name='Acciones 2024 (2do Trimestre)', show=False)
+layer_6 = FeatureGroup(name='Acciones 2024 (3er Trimestre)', show=False)
+
 
 # ---- Marcadores de las actividades
 from folium.plugins import MarkerCluster
@@ -160,10 +163,11 @@ def genera(df_in, mc):
             mc)
 genera(df2021, mc_1)
 genera(df2022, mc_2)
-genera(df2023_1, mc_3)
-genera(df2023_2, mc_4)
-genera(df2023_3, mc_5)
-genera(df2023_4, mc_6)
+genera(df2023, mc_3)
+genera(df2024_1, mc_4)
+genera(df2024_2, mc_5)
+genera(df2024_3, mc_6)
+
 
 mc_1.add_to(layer_1)
 mc_2.add_to(layer_2)
