@@ -9,13 +9,14 @@ def highlight(feature):
         'line_opacity': 0.7
     }
 
-def genera_actividades(municipio, beneficiados, programa, foto,anio):
+def genera_actividades(municipio, fecha, programa, beneficiados, foto,anio):
     texto = """
         <article class="popup" style="background-color:#900C3F; margin: 0px; font-family:sans-serif; font-size:11px;border-radius: 20px; padding=5px;">
             <div class="card-body">
                 <h5 align = "center"><span class="badge badge-danger">""" + municipio + """</span></h5>
-                <p style="color:#FFFFFF; margin: 0px;"><i class="fa fa-calendar" style = "color:#FAC63A;"></i> <strong> ACCIONES """+ anio +""" </strong></p>
-                <p style="color:#FFFFFF; margin: 0px;"><i class="fa fa-group" style = "color:#FAC63A;"></i><strong>BENEFICIADOS: </strong>""" + beneficiados + """</p>
+                                <p style="color:#FFFFFF; margin: 0px;"><i class="fa fa-calendar" style = "color:#FAC63A;"></i> <strong> ACCIONES """+ anio +""" </strong></p>
+                <p style="color:#FFFFFF; margin: 0px;"><i class="fa fa-calendar" style = "color:#FAC63A;"></i><strong> FECHA: </strong> """ + fecha + """  </p>
+                <p style="color:#FFFFFF; margin: 0px;"><i class="fa fa-group" style = "color:#FAC63A;"></i><strong> BENEFICIADOS: </strong>""" + beneficiados + """</p>
                 <p style="color:#FFFFFF; margin: 0px;">""" + programa + """</p>
         """
     if foto != "0":

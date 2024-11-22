@@ -51,13 +51,15 @@ df = gpd.read_file(Path.joinpath(path_ini, Path("Veracruz/Veracruz_Shape1.shp"))
 # print(df)
 df_Localidades = pd.read_csv(Path.joinpath(path_ini, "cabeceras (localidades).csv"))
 df_actividades = pd.read_excel("CEBV_OK.xlsx", sheet_name='ACTIVIDADES')
-df_actividades_2022 = pd.read_excel("CEBV_OK_2022.xlsx", sheet_name='ACTIVIDADES')
-df_actividades_2023 = pd.read_excel("CEBV_OK_2023.xlsx", sheet_name='ACTIVIDADES_2023')
+df_actividades_2022 = pd.read_excel("CEBV_OK.xlsx", sheet_name='ACTIVIDADES_2022')
+df_actividades_2023 = pd.read_excel("CEBV_OK.xlsx", sheet_name='ACTIVIDADES_2023')
+df_actividades_2024 = pd.read_excel("CEBV_OK.xlsx", sheet_name='ACTIVIDADES_2024')
 df_oficinas = pd.read_excel("CEBV_OK.xlsx", sheet_name='OFICINAS')
 
 df_actividades = pd.merge(df_actividades, df_Localidades, on="CVEGEO")
 df_actividades_2022 = pd.merge(df_actividades_2022, df_Localidades, on="CVEGEO")
 df_actividades_2023 = pd.merge(df_actividades_2023, df_Localidades, on="CVEGEO")
+df_actividades_2024 = pd.merge(df_actividades_2024, df_Localidades, on="CVEGEO")
 df_oficinas = pd.merge(df_oficinas, df_Localidades, on='CVEGEO')
 
 df.loc[df['region'] == 'Las_Montanas', 'region'] = 'Las Montañas'
@@ -125,6 +127,7 @@ layer_1 = FeatureGroup(name='Actividades 2021', show=False)
 layer_2 = FeatureGroup(name='Directorio Oficinas', show=False)
 layer_3 = FeatureGroup(name='Actividades 2022', show=False)
 layer_4 = FeatureGroup(name='Actividades 2023', show=False)
+layer_5 = FeatureGroup(name='Actividades 2024 (1er, 2do y 3er Trimestre)', show=False)
 # ---- Marcadores de las actividades
 from folium.plugins import MarkerCluster
 
@@ -132,6 +135,7 @@ mc_1 = MarkerCluster()
 mc_2 = MarkerCluster()
 mc_3 = MarkerCluster()
 mc_4 = MarkerCluster()
+mc_5 = MarkerCluster()
 
 pd.set_option('display.max_columns', None)
 
@@ -139,7 +143,7 @@ pd.set_option('display.max_columns', None)
 def genera(df_in, mc, func, anio):
     for row in df_in.itertuples():
         if func == "actividades":
-            contenido = genera_actividades(str(row.MUNICIPIO), str(row.BENEFICIADOS), str(row.PROGRAMA),
+            contenido = genera_actividades(str(row.MUNICIPIO), str(row.FECHA), str(row.PROGRAMA), str(row.BENEFICIADOS),
                                            str(row.FOTO), anio)
         elif func == "oficinas":
             contenido = genera_oficinas(str(row.MUNICIPIO), str(row.SP), str(row.TEL), str(row.DIR),
@@ -157,16 +161,19 @@ genera(df_actividades, mc_1, "actividades","2021")
 genera(df_oficinas, mc_2, "oficinas","2021")
 genera(df_actividades_2022, mc_3, "actividades","2022")
 genera(df_actividades_2023, mc_4, "actividades","2023")
+genera(df_actividades_2024, mc_5, "actividades","2024")
 
 mc_1.add_to(layer_1)
 mc_2.add_to(layer_2)
 mc_3.add_to(layer_3)
 mc_4.add_to(layer_4)
+mc_5.add_to(layer_5)
 
-layer_1.add_to(m)
 layer_2.add_to(m)
+layer_1.add_to(m)
 layer_3.add_to(m)
 layer_4.add_to(m)
+layer_5.add_to(m)
 
 # ---- Botón de Búsqueda de Municipio
 statesearch = Search(
