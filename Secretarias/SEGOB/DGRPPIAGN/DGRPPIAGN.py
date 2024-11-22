@@ -53,6 +53,8 @@ df_actividades_2022 = pd.read_excel("DGRPPIAGN_OK.xlsx", sheet_name='ACTIVIDADES
 df_actividades_2023 = pd.read_excel("DGRPPIAGN_OK.xlsx", sheet_name='ACTIVIDADES2023')
 
 df_actividades_2024_1 = pd.read_excel("DGRPPIAGN_OK.xlsx", sheet_name='ACTIVIDADES2024_1')
+df_actividades_2024_2 = pd.read_excel("DGRPPIAGN_OK.xlsx", sheet_name='ACTIVIDADES2024_2')
+df_actividades_2024_3 = pd.read_excel("DGRPPIAGN_OK.xlsx", sheet_name='ACTIVIDADES2024_3')
 
 def format(x):
     return "{:,}".format(x)
@@ -97,6 +99,8 @@ df_actividades_2022 = pd.merge(df_actividades_2022, df_Localidades, on="CVEGEO")
 df_actividades_2023 = pd.merge(df_actividades_2023, df_Localidades, on="CVEGEO")
 
 df_actividades_2024_1 = pd.merge(df_actividades_2024_1, df_Localidades, on="CVEGEO")
+df_actividades_2024_2 = pd.merge(df_actividades_2024_2, df_Localidades, on="CVEGEO")
+df_actividades_2024_3 = pd.merge(df_actividades_2024_3, df_Localidades, on="CVEGEO")
 df_oficinas = pd.merge(df_oficinas, df_Localidades, on="CVEGEO")
 
 df.loc[df['region'] == 'Las_Montanas', 'region'] = 'Las Montañas'
@@ -162,6 +166,8 @@ layer_2 = FeatureGroup(name='Acciones 2021', show=False)
 layer_3 = FeatureGroup(name='Acciones 2022', show=False)
 layer_4 = FeatureGroup(name='Acciones 2023', show=False)
 layer_8 = FeatureGroup(name='Acciones 2024 (1er Trimestre)', show=False)
+layer_9 = FeatureGroup(name='Acciones 2024 (2do Trimestre)', show=False)
+layer_10 = FeatureGroup(name='Acciones 2024 (3er Trimestre)', show=False)
 
 
 # ---- Marcadores de las actividades
@@ -172,6 +178,8 @@ mc_2 = MarkerCluster()
 mc_3 = MarkerCluster()
 mc_4 = MarkerCluster()
 mc_8 = MarkerCluster()
+mc_9 = MarkerCluster()
+mc_10 = MarkerCluster()
 
 pd.set_option('display.max_columns', None)
 
@@ -203,20 +211,24 @@ genera_actividades(df_actividades, mc_2,"2021")
 genera_actividades(df_actividades_2022, mc_3, "2022")
 genera_actividades(df_actividades_2023, mc_4, "2023")
 genera_actividades(df_actividades_2024_1, mc_8, "2024")
+genera_actividades(df_actividades_2024_2, mc_9, "2024")
+genera_actividades(df_actividades_2024_3, mc_10, "2024")
 
 mc_1.add_to(layer_1)
 mc_2.add_to(layer_2)
 mc_3.add_to(layer_3)
 mc_4.add_to(layer_4)
 mc_8.add_to(layer_8)
-
+mc_9.add_to(layer_9)
+mc_10.add_to(layer_10)
 
 layer_1.add_to(m)
 layer_2.add_to(m)
 layer_3.add_to(m)
 layer_4.add_to(m)
 layer_8.add_to(m)
-
+layer_9.add_to(m)
+layer_10.add_to(m)
 
 # ---- Botón de Búsqueda de Municipio
 statesearch = Search(
